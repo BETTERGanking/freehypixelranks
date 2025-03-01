@@ -47,26 +47,17 @@ body {
 
 /* Mobile Optimization */
 @media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .text-content {
-        text-align: center;
-        font-size: 1.5rem;
-        padding-left: 0;
-        margin-bottom: 20px;
-    }
-
     .video-wrapper {
-        justify-content: center;
-        margin-left: 0;
-        width: 100%;
+        width: 90%; /* Smaller player for mobile */
+        margin-top: 60px; /* Moves the video down */
     }
 
     .video-wrapper iframe {
-        width: 90%;
-        height: 220px;
+        height: 200px; /* Smaller height for mobile */
+    }
+
+    .text-content {
+        font-size: 1.2rem; /* Slightly smaller text */
+        padding-top: 50px; /* Pushes text further down */
     }
 }
