@@ -12,18 +12,16 @@ body {
 .text-content {
     position: relative;
     z-index: 2; /* Ensures text is above the video */
-    padding-top: 20px; /* Moves text down */
     font-size: 1.5rem;
+    padding-top: 30px; /* Adds more space */
 }
 
 /* Video Player Wrapper */
 .video-wrapper {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 650px; /* Adjusted for PC */
+    position: relative;
+    margin: 20px auto 0;
+    width: 650px; /* Default for PC */
     max-width: 80%; /* Ensures responsiveness */
-    transform: translate(-50%, -50%);
     z-index: 1; /* Keeps it behind text */
 }
 
@@ -38,16 +36,15 @@ body {
 @media (max-width: 768px) {
     .video-wrapper {
         width: 90%; /* Smaller player for mobile */
-        top: 55%; /* Moves down slightly */
-        transform: translate(-50%, -45%); /* Adjusts centering */
+        margin-top: 60px; /* Moves the video down */
     }
 
     .video-wrapper iframe {
-        height: 220px; /* Smaller height for mobile */
+        height: 200px; /* Smaller height for mobile */
     }
 
     .text-content {
         font-size: 1.2rem; /* Slightly smaller text */
-        padding-top: 30px; /* Pushes text down for better visibility */
+        padding-top: 50px; /* Pushes text further down */
     }
 }
