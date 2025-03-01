@@ -6,47 +6,48 @@ body {
     text-align: center;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers content horizontally */
+    justify-content: center; /* Centers content vertically */
+    min-height: 100vh;
 }
 
 /* Text Styling */
 .text-content {
-    position: relative;
-    z-index: 2; /* Ensures text is above the video */
     font-size: 1.5rem;
-    padding-top: 30px; /* Adds more space */
+    padding-bottom: 20px;
 }
 
 /* Video Player Wrapper */
 .video-wrapper {
     position: relative;
-    margin: 20px auto 0;  /* Centering the wrapper */
-    width: 650px; /* Default for PC */
-    max-width: 80%; /* Ensures responsiveness */
-    z-index: 1; /* Keeps it behind text */
+    width: 650px; /* Default for desktop */
+    max-width: 90%; /* Responsive */
     display: flex;
-    justify-content: center; /* Centers the iframe inside */
+    justify-content: center;
+    align-items: center;
 }
 
 /* Iframe Styling */
 .video-wrapper iframe {
-    width: 100%; /* Makes iframe responsive */
-    height: 365px; /* Adjusted proportionally */
+    width: 100%;
+    height: 365px;
     border: none;
 }
 
 /* Mobile Optimization */
 @media (max-width: 768px) {
+    .text-content {
+        font-size: 1.2rem; /* Slightly smaller text */
+        padding-bottom: 30px; /* Extra spacing */
+    }
+
     .video-wrapper {
-        width: 90%; /* Smaller player for mobile */
-        margin-top: 60px; /* Moves the video down */
+        width: 95%; /* More flexible width */
     }
 
     .video-wrapper iframe {
-        height: 200px; /* Smaller height for mobile */
-    }
-
-    .text-content {
-        font-size: 1.2rem; /* Slightly smaller text */
-        padding-top: 50px; /* Pushes text further down */
+        height: 200px; /* Smaller player */
     }
 }
