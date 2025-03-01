@@ -4,7 +4,7 @@ function App() {
   return (
     <div className="container">
       <h1>You're almost done.</h1>
-      <p>Please follow the steps to configure your project and deploy it.</p>
+      <p>Please watch the video to claim.</p>
 
       <div className="video-wrapper">
         <iframe 
