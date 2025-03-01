@@ -1,11 +1,11 @@
-/* Reset default margin/padding */
+/* Reset default styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Center everything */
+/* Make the entire screen flexbox-centered */
 body, html {
   display: flex;
   justify-content: center;
@@ -14,26 +14,24 @@ body, html {
   background-color: #f4f4f4;
 }
 
-/* Container should center content */
+/* Container to hold the video */
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  max-width: 900px;
-  padding: 20px;
 }
 
-/* Ensure video is properly sized */
+/* Video Wrapper to make it responsive */
 .video-wrapper {
-  width: 90%;
+  width: 80%;
   max-width: 900px;
-  height: auto;
-  aspect-ratio: 16 / 9;
-  background-color: #000;
+  aspect-ratio: 16 / 9; /* Ensures correct proportions */
+  background-color: black;
+  position: relative;
 }
 
-/* Iframe styling */
+/* Full-size iframe inside the wrapper */
 .video-wrapper iframe {
   width: 100%;
   height: 100%;
