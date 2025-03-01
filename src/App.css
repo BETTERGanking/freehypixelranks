@@ -19,10 +19,12 @@ body {
 /* Video Player Wrapper */
 .video-wrapper {
     position: relative;
-    margin: 20px auto 0;
+    margin: 20px auto 0;  /* Centering the wrapper */
     width: 650px; /* Default for PC */
     max-width: 80%; /* Ensures responsiveness */
     z-index: 1; /* Keeps it behind text */
+    display: flex;
+    justify-content: center; /* Centers the iframe inside */
 }
 
 /* Iframe Styling */
