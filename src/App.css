@@ -7,22 +7,22 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  overflow: hidden; /* Prevents horizontal scrollbars */
 }
 
-/* Container to center the video */
+/* The container that holds the video */
 .container {
   width: 100%;
-  max-width: 1280px; /* Limit the max width for larger screens */
-  margin: 0 auto; /* Horizontally center the container */
+  max-width: 1280px; /* Max width for larger screens */
   padding: 20px;
-  box-sizing: border-box; /* Include padding in the element's total width/height */
+  box-sizing: border-box;
 }
 
 /* Wrapper for the video to maintain aspect ratio */
 .video-wrapper {
   position: relative;
   width: 100%;
-  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  padding-top: 56.25%; /* 16:9 Aspect Ratio (height / width * 100) */
   overflow: hidden;
   background-color: #000;
 }
@@ -37,16 +37,19 @@ iframe {
   border: none;
 }
 
-/* Media query for devices smaller than 768px (tablets and smaller) */
+/* Media query for smaller screens (tablets and smaller) */
 @media screen and (max-width: 768px) {
+  .container {
+    padding: 10px; /* Adjust container padding */
+  }
   .video-wrapper {
-    padding-top: 56.25%; /* Keep aspect ratio consistent */
+    padding-top: 56.25%; /* Ensure aspect ratio is maintained */
   }
 }
 
-/* Media query for devices smaller than 480px (phones) */
+/* Media query for very small screens (phones) */
 @media screen and (max-width: 480px) {
   .video-wrapper {
-    padding-top: 56.25%; /* Keep aspect ratio consistent */
+    padding-top: 56.25%; /* Ensure aspect ratio is maintained */
   }
 }
