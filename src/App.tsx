@@ -12,7 +12,7 @@ function App() {
           allowFullScreen
         ></iframe>
       </div>
-      
+      <p>Updates coming soon!</p>
     </div>
   );
 }
