@@ -1,54 +1,24 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  background-color: #f4f4f4;
+.container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  overflow: hidden; /* Prevents horizontal scrollbars */
+  background-color: #f4f4f4;
 }
 
-/* The container that holds the video */
-.container {
-  width: 100%;
-  max-width: 1280px; /* Max width for larger screens */
-  padding: 20px;
-  box-sizing: border-box;
-}
-
-/* Wrapper for the video to maintain aspect ratio */
 .video-wrapper {
-  position: relative;
-  width: 100%;
-  padding-top: 56.25%; /* 16:9 Aspect Ratio (height / width * 100) */
-  overflow: hidden;
-  background-color: #000;
+  position: fixed;  /* Fix position on screen */
+  bottom: 20px;      /* Distance from bottom */
+  right: 20px;       /* Distance from right */
+  width: 320px;      /* Set a fixed width */
+  height: 180px;     /* Maintain aspect ratio (16:9) */
+  z-index: 1000;     /* Make sure it's above other elements */
+  border-radius: 10px;
+  overflow: hidden; /* Hide overflow */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Optional: shadow effect */
 }
 
-/* Style for the iframe */
-iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
+.video-wrapper iframe {
   width: 100%;
   height: 100%;
-  border: none;
-}
-
-/* Media query for smaller screens (tablets and smaller) */
-@media screen and (max-width: 768px) {
-  .container {
-    padding: 10px; /* Adjust container padding */
-  }
-  .video-wrapper {
-    padding-top: 56.25%; /* Ensure aspect ratio is maintained */
-  }
-}
-
-/* Media query for very small screens (phones) */
-@media screen and (max-width: 480px) {
-  .video-wrapper {
-    padding-top: 56.25%; /* Ensure aspect ratio is maintained */
-  }
 }
