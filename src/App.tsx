@@ -3,8 +3,9 @@ import './App.css';
 function App() {
   return (
     <div className="container">
-      <h1>Welcome to My Website</h1> {/* Other content remains visible */}
-      
+      <h1>You're almost done.</h1>
+      <p>Please follow the steps to configure your project and deploy it.</p>
+
       <div className="video-wrapper">
         <iframe 
           src="https://www.youtube.com/embed/D_MUbs9dnDU" 
