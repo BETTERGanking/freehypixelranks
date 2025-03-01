@@ -15,18 +15,25 @@ body {
 .container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     max-width: 1200px;
     width: 90%;
+    gap: 50px; /* Adds spacing between text and video */
 }
 
 /* Left Side - Text */
 .text-content {
     flex: 1;
     text-align: left;
-    font-size: 1.8rem;
-    padding-left: 50px;
-    max-width: 45%;
+    font-size: 2rem;
+    padding-left: 20px;
+    max-width: 50%;
+}
+
+/* Small text under main heading */
+.text-content p {
+    font-size: 1rem;
+    margin-top: 10px;
 }
 
 /* Right Side - Video */
@@ -36,38 +43,33 @@ body {
     justify-content: center;
     align-items: center;
     max-width: 450px;
-    margin-left: -50px; /* Adjust positioning inside marked area */
 }
 
 /* Iframe Styling */
 .video-wrapper iframe {
-    width: 400px;
-    height: 250px;
+    width: 100%;
+    max-width: 400px; /* Prevents it from getting too big */
+    height: 225px; /* Proportional height */
     border: none;
 }
 
-/* Mobile Optimization */
+/* Mobile Fix */
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
-        align-items: center;
         text-align: center;
+        gap: 30px;
     }
 
     .text-content {
         max-width: 90%;
-        font-size: 1.5rem; /* Adjust text size */
-        padding: 20px;
+        font-size: 1.5rem;
     }
 
     .video-wrapper {
-        width: 100%;
-        margin-left: 0;
-        margin-top: 20px;
+        max-width: 90%;
     }
 
     .video-wrapper iframe {
-        width: 90%;
-        height: 200px;
-    }
-}
+        width: 100%;
+        max-wi
