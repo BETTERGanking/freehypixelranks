@@ -11,7 +11,7 @@ function App() {
           referrerPolicy="strict-origin-when-cross-origin"
           allowFullScreen
         ></iframe>
-        <p>Jau</p>
+       
       </div>
     </div>
   );
