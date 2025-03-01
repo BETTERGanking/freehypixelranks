@@ -40,3 +40,21 @@
 .read-the-docs {
   color: #888;
 }
+
+    body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            text-align: center;
+        }
+        iframe {
+            width: 1280px; /* Set to desired width */
+            height: 720px; /* Set to desired height */
+            border: none;
+        }
