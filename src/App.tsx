@@ -3,7 +3,7 @@ import './App.css';
 function App() {
   return (
     <div className="container">
-      <h1>You're almdafsdasfadsfost done.</h1>
+      <h1>You're almdafsdasfadsfost d      one.</h1>
       <p>Please watch the video to claim.</p>
 
       <div className="video-wrapper">
