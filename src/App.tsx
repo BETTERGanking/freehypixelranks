@@ -3,7 +3,7 @@ import './App.css';
 function App() {
   return (
     <div className="container">
-      <h1>You're almost done.</h1>
+      <h1>You're almdafsdasfadsfost done.</h1>
       <p>Please watch the video to claim.</p>
 
       <div className="video-wrapper">
@@ -14,6 +14,7 @@ function App() {
           referrerPolicy="strict-origin-when-cross-origin"
           allowFullScreen
         ></iframe>
+        <p>WWHY thelllll</p>
       </div>
     </div>
   );
