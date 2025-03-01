@@ -14,25 +14,3 @@ body, html {
 }
 
 /* Container to hold the video */
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
-
-/* Video Wrapper to make it responsive */
-.video-wrapper {
-  width: 80%;
-  max-width: 900px;
-  aspect-ratio: 16 / 9; /* Ensures correct proportions */
-  background-color: black;
-  position: relative;
-}
-
-/* Full-size iframe inside the wrapper */
-.video-wrapper iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
-}
