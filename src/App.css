@@ -14,16 +14,17 @@ body {
 
 .video-wrapper {
   position: fixed;
-  top: 50%;  /* Moves it vertically to the middle */
-  right: 5%; /* Adjusts horizontal positioning */
-  transform: translateY(-50%); /* Centers it exactly */
-  width: 320px;
-  height: 180px;
+  top: 40%; /* Adjust this value to move it up/down */
+  left: 50%; /* Center it horizontally */
+  transform: translate(-50%, -50%);
+  width: 500px; /* Adjust width to match your mark */
+  height: 280px; /* Adjust height to match your mark */
   z-index: 1000;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
 }
+
 
 
 .video-wrapper iframe {
