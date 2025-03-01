@@ -5,7 +5,6 @@
   box-sizing: border-box;
 }
 
-/* Make the entire screen flexbox-centered */
 body, html {
   display: flex;
   justify-content: center;
