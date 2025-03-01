@@ -18,7 +18,7 @@ body {
     justify-content: center;
     max-width: 1200px;
     width: 90%;
-    gap: 50px; /* Adds spacing between text and video */
+    gap: 50px; /* Spacing between text and video */
 }
 
 /* Left Side - Text */
@@ -42,14 +42,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 450px;
+    max-width: 560px; /* Matches YouTube standard width */
 }
 
 /* Iframe Styling */
 .video-wrapper iframe {
-    width: 100%;
-    max-width: 400px; /* Prevents it from getting too big */
-    height: 225px; /* Proportional height */
+    width: 560px; /* Standard YouTube size */
+    height: 315px; /* Standard YouTube height */
     border: none;
 }
 
@@ -67,9 +66,12 @@ body {
     }
 
     .video-wrapper {
-        max-width: 90%;
+        max-width: 100%;
     }
 
     .video-wrapper iframe {
         width: 100%;
-        max-wi
+        max-width: 360px;
+        height: 200px;
+    }
+}
