@@ -18,7 +18,7 @@ body {
     justify-content: space-between; /* Ensures spacing */
     max-width: 1200px;
     width: 90%;
-    gap: 80px; /* Increased spacing between text & video */
+    gap: 100px; /* Increased spacing between text & video */
 }
 
 /* Left Side - Text */
@@ -40,7 +40,7 @@ body {
 .video-wrapper {
     flex: 1;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end; /* Moves video fully to the right */
     align-items: center;
     max-width: 560px;
 }
@@ -67,6 +67,7 @@ body {
 
     .video-wrapper {
         max-width: 100%;
+        justify-content: center;
     }
 
     .video-wrapper iframe {
