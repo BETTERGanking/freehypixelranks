@@ -1,4 +1,3 @@
-/* General body styling to center everything */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -12,9 +11,8 @@ body {
 
 /* The container that holds the video */
 .container {
-  text-align: center;
   width: 100%;
-  max-width: 1280px;
+  max-width: 1280px; /* Max width for larger screens */
   padding: 20px;
   box-sizing: border-box;
 }
@@ -23,12 +21,13 @@ body {
 .video-wrapper {
   position: relative;
   width: 100%;
-  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  padding-top: 56.25%; /* 16:9 Aspect Ratio (height / width * 100) */
+  overflow: hidden;
   background-color: #000;
 }
 
 /* Style for the iframe */
-.video-wrapper iframe {
+iframe {
   position: absolute;
   top: 0;
   left: 0;
@@ -37,16 +36,19 @@ body {
   border: none;
 }
 
-/* Media query for smaller screens */
+/* Media query for smaller screens (tablets and smaller) */
 @media screen and (max-width: 768px) {
   .container {
-    padding: 10px;
+    padding: 10px; /* Adjust container padding */
+  }
+  .video-wrapper {
+    padding-top: 56.25%; /* Ensure aspect ratio is maintained */
   }
 }
 
-/* Media query for very small screens */
+/* Media query for very small screens (phones) */
 @media screen and (max-width: 480px) {
   .video-wrapper {
-    padding-top: 56.25%;
+    padding-top: 56.25%; /* Ensure aspect ratio is maintained */
   }
 }
