@@ -1,42 +1,53 @@
+/* General Styling */
 body {
-  background-color: #0d0d0d; /* Dark background (not pure black) */
-  color: white;
-  font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
+/* Text Styling */
+.text-content {
+    position: relative;
+    z-index: 2; /* Ensures text is above the video */
+    padding-top: 20px; /* Moves text down */
+    font-size: 1.5rem;
 }
 
+/* Video Player Wrapper */
 .video-wrapper {
-  position: fixed;
-  top: 35%; /* Adjust as needed */
-  left: 30%; /* Move it left to fit inside the marked area */
-  width: 600px; /* Resize width based on the mark */
-  height: 350px; /* Resize height accordingly */
-  transform: translate(0, 0);
-  z-index: 1000;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
-}
-.video-wrapper iframe {
-  width: 100%;
-  height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 650px; /* Adjusted for PC */
+    max-width: 80%; /* Ensures responsiveness */
+    transform: translate(-50%, -50%);
+    z-index: 1; /* Keeps it behind text */
 }
 
+/* Iframe Styling */
+.video-wrapper iframe {
+    width: 100%; /* Makes iframe responsive */
+    height: 365px; /* Adjusted proportionally */
+    border: none;
+}
+
+/* Mobile Optimization */
 @media (max-width: 768px) {
-  .video-wrapper {
-    top: auto;  /* Reset position */
-    bottom: 10%; /* Move it below the text */
-    left: 50%;
-    width: 90%;  /* Make it responsive */
-    height: auto;
-    max-width: 400px;
-    transform: translateX(-50%);
-  }
+    .video-wrapper {
+        width: 90%; /* Smaller player for mobile */
+        top: 55%; /* Moves down slightly */
+        transform: translate(-50%, -45%); /* Adjusts centering */
+    }
+
+    .video-wrapper iframe {
+        height: 220px; /* Smaller height for mobile */
+    }
+
+    .text-content {
+        font-size: 1.2rem; /* Slightly smaller text */
+        padding-top: 30px; /* Pushes text down for better visibility */
+    }
 }
