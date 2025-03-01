@@ -1,78 +1,88 @@
-/* General Styling */
-body {
-    background-color: #000;
-    color: #fff;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Video Player</title>
+    <style>
+        /* Page Styles */
+        body {
+            margin: 0;
+            background-color: #000;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
 
-/* Main Container */
-.container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between; /* Ensures spacing */
-    max-width: 1200px;
-    width: 90%;
-    gap: 100px; /* Increased spacing between text & video */
-}
+        /* Video Wrapper */
+        .video-wrapper {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 320px;  /* Matching YouTube minimized size */
+            height: 180px; /* 16:9 aspect ratio */
+            z-index: 1000; /* Keeps player on top */
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            background: black;
+        }
 
-/* Left Side - Text */
-.text-content {
-    flex: 1;
-    text-align: left;
-    font-size: 2rem;
-    max-width: 50%;
-    padding-left: 20px;
-}
+        /* Embedded Video */
+        .video-wrapper iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
 
-/* Small text under main heading */
-.text-content p {
-    font-size: 1rem;
-    margin-top: 10px;
-}
+        /* Close Button */
+        .close-btn {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background: red;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            font-size: 16px;
+            cursor: pointer;
+            z-index: 1001;
+        }
 
-/* Right Side - Video */
-.video-wrapper {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end; /* Moves video fully to the right */
-    align-items: center;
-    max-width: 560px;
-}
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            .video-wrapper {
+                width: 240px;
+                height: 135px;
+                bottom: 10px;
+                right: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
 
-/* Iframe Styling */
-.video-wrapper iframe {
-    width: 560px; /* Standard YouTube embed size */
-    height: 315px;
-    border: none;
-}
+    <h1>You're almost done.</h1>
+    <p>Please follow the steps to complete your process.</p>
 
-/* Mobile Fix */
-@media (max-width: 1024px) {
-    .container {
-        flex-direction: column;
-        text-align: center;
-        gap: 30px;
-    }
+    <!-- Video Player -->
+    <div class="video-wrapper" id="videoPlayer">
+        <button class="close-btn" onclick="closeVideo()">×</button>
+        <iframe 
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" 
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+        </iframe>
+    </div>
 
-    .text-content {
-        max-width: 90%;
-        font-size: 1.5rem;
-    }
+    <script>
+        function closeVideo() {
+            document.getElementById("videoPlayer").style.display = "none";
+        }
+    </script>
 
-    .video-wrapper {
-        max-width: 100%;
-        justify-content: center;
-    }
-
-    .video-wrapper iframe {
-        width: 100%;
-        max-width: 360px;
-        height: 200px;
-    }
-}
+</body>
+</html>
