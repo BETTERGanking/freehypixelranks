@@ -11,29 +11,35 @@ body {
 .container {
   text-align: center;
   width: 100%;
-  max-width: 1280px; /* Ensure the video doesn't stretch beyond this width */
+  max-width: 1280px; /* Max width for large screens */
   margin: 0 auto;
 }
 
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio (height / width * 100) */
+  overflow: hidden;
+  background: #000;
+}
+
 iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  max-width: 1280px; /* Max width for large screens */
-  max-height: 720px; /* Max height */
   border: none;
 }
 
 @media screen and (max-width: 768px) {
-  iframe {
-    max-width: 100%; /* Make the iframe full-width for smaller screens */
-    height: auto; /* Adjust height to maintain aspect ratio */
+  .video-wrapper {
+    padding-top: 56.25%; /* Ensure aspect ratio is maintained */
   }
 }
 
 @media screen and (max-width: 480px) {
-  iframe {
-    max-width: 100%;
-    height: auto;
+  .video-wrapper {
+    padding-top: 56.25%; /* Ensure aspect ratio is maintained */
   }
 }
-
