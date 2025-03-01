@@ -1,4 +1,4 @@
-/* General body styling to center everything */
+/* General body styling */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -7,19 +7,19 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  overflow: hidden; /* Prevents horizontal scrollbars */
+  overflow: hidden; /* Prevents horizontal scrolling */
+  text-align: center; /* Ensures text is centered */
 }
 
-/* The container that holds the video */
+/* Container for the content */
 .container {
-  text-align: center;
-  width: 100%;
+  width: 90%;
   max-width: 1280px;
   padding: 20px;
   box-sizing: border-box;
 }
 
-/* Wrapper for the video to maintain aspect ratio */
+/* Responsive video wrapper */
 .video-wrapper {
   position: relative;
   width: 100%;
@@ -27,7 +27,7 @@ body {
   background-color: #000;
 }
 
-/* Style for the iframe */
+/* Styling for the iframe */
 .video-wrapper iframe {
   position: absolute;
   top: 0;
@@ -37,16 +37,29 @@ body {
   border: none;
 }
 
-/* Media query for smaller screens */
+/* Ensure text is readable */
+p {
+  font-size: 16px;
+  color: #333;
+  margin-top: 10px;
+}
+
+/* Fix for large text issues */
 @media screen and (max-width: 768px) {
   .container {
     padding: 10px;
   }
+  p {
+    font-size: 14px; /* Reduce font size on smaller screens */
+  }
 }
 
-/* Media query for very small screens */
+/* Mobile screen fixes */
 @media screen and (max-width: 480px) {
   .video-wrapper {
-    padding-top: 56.25%;
+    padding-top: 56.25%; /* Maintain aspect ratio */
+  }
+  p {
+    font-size: 12px; /* Further reduce font size for very small screens */
   }
 }
