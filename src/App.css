@@ -12,8 +12,9 @@ body {
 
 /* The container that holds the video */
 .container {
+  text-align: center;
   width: 100%;
-  max-width: 1280px; /* Max width for larger screens */
+  max-width: 1280px;
   padding: 20px;
   box-sizing: border-box;
 }
@@ -22,13 +23,12 @@ body {
 .video-wrapper {
   position: relative;
   width: 100%;
-  padding-top: 56.25%; /* 16:9 Aspect Ratio (height / width * 100) */
-  overflow: hidden;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
   background-color: #000;
 }
 
 /* Style for the iframe */
-iframe {
+.video-wrapper iframe {
   position: absolute;
   top: 0;
   left: 0;
@@ -37,19 +37,16 @@ iframe {
   border: none;
 }
 
-/* Media query for smaller screens (tablets and smaller) */
+/* Media query for smaller screens */
 @media screen and (max-width: 768px) {
   .container {
-    padding: 10px; /* Adjust container padding */
-  }
-  .video-wrapper {
-    padding-top: 56.25%; /* Ensure aspect ratio is maintained */
+    padding: 10px;
   }
 }
 
-/* Media query for very small screens (phones) */
+/* Media query for very small screens */
 @media screen and (max-width: 480px) {
   .video-wrapper {
-    padding-top: 56.25%; /* Ensure aspect ratio is maintained */
+    padding-top: 56.25%;
   }
 }
