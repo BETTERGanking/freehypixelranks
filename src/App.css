@@ -1,21 +1,27 @@
+body {
+  background-color: #0d0d0d; /* Dark background (not pure black) */
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
 .container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
   height: 100vh;
-  background-color: #f4f4f4;
 }
 
 .video-wrapper {
-  position: fixed;  /* Fix position on screen */
-  bottom: 20px;      /* Distance from bottom */
-  right: 20px;       /* Distance from right */
-  width: 320px;      /* Set a fixed width */
-  height: 180px;     /* Maintain aspect ratio (16:9) */
-  z-index: 1000;     /* Make sure it's above other elements */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 320px;
+  height: 180px;
+  z-index: 1000;
   border-radius: 10px;
-  overflow: hidden; /* Hide overflow */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Optional: shadow effect */
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2); /* Light shadow for a soft effect */
 }
 
 .video-wrapper iframe {
